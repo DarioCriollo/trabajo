@@ -109,9 +109,9 @@ class Welcome extends CI_Controller {
 			//echo "paso para ingresar";
 			$this->load->model('Sesion_model');
 
-			$res['mensaje']=$this->sesion->consultar_usr();
+			$res['mensaje']=$this->Sesion_model->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->sesion->consultar_tipo($tipo);
+			$res['tipo']=$this->Sesion_model->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {
 				case 'e':
@@ -126,7 +126,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				//$this->load->view('formulario',$res);
 			}else{
-				$this->load->model('sesion');
+				$this->load->model('Sesion_model');
 				redirect('usuarios');
 			}
 		}

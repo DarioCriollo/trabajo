@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 	public function about(){
 		$this->load->view('about');
 
-			$this->load->view('Sesion');
+			$this->load->view('Sesion_model');
 	}
 	public function parlanateam(){
 		$this->load->view('parlanateam');
@@ -107,7 +107,7 @@ class Welcome extends CI_Controller {
 		}else{
 			//por falso para ingresar
 			//echo "paso para ingresar";
-			$this->load->model('sesion');
+			$this->load->model('Sesion_model');
 
 			$res['mensaje']=$this->sesion->consultar_usr();
 			$tipo=$res;

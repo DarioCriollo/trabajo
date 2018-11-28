@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Msesion extends CI_Model {
+class m_sesion extends CI_Model {
 
-  function __construct()
-	{
-		parent::__construct();
-		//$this->load->database();
-	}
+
+  function __construct() {
+        parent::__construct();
+
+    }
 
 	function consultar_usr(){
 		$log=$this->input->post('txtlog');

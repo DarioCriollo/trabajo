@@ -98,10 +98,10 @@ class Welcome extends CI_Controller {
 		}else{
 			//por falso para ingresar
 			//echo "paso para ingresar";
-			$this->load->model('msesion');
-			$res['mensaje']=$this->msesion->consultar_usr();
+			$this->load->model('m_sesion');
+			$res['mensaje']=$this->m_sesion->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->msesion->consultar_tipo($tipo);
+			$res['tipo']=$this->m_sesion->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {
 				case 'e':
@@ -116,7 +116,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				//$this->load->view('formulario',$res);
 			}else{
-				$this->load->model('msesion');
+				$this->load->model('m_sesion');
 				redirect('usuarios');
 			}
 		}
@@ -139,8 +139,8 @@ class Welcome extends CI_Controller {
 			$carrer=$this->input->post('txtcarrer');
 			$email=$this->input->post('txtemail');
 			$clave=$this->input->post('txtcla');
-			$this->load->model('msesion');
-			$res['mensaje']=$this->msesion->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
+			$this->load->model('m_sesion');
+			$res['mensaje']=$this->m_sesion->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
 				if($res['mensaje']=='the code already exists'){
 					$this->load->view('plantilla');
 					$this->load->view('registro',$res);

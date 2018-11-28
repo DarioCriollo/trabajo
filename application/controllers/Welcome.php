@@ -6,7 +6,7 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 			parent::__construct();
-			$this->load->model('sesion');
+
 	}
 
 	public function index()
@@ -105,6 +105,7 @@ class Welcome extends CI_Controller {
 			//por falso para ingresar
 			//echo "paso para ingresar";
 			//$this->load->model('sesion');
+				$this->load->model('sesion');
 			$res['mensaje']=$this->sesion->consultar_usr();
 			$tipo=$res;
 			$res['tipo']=$this->sesion->consultar_tipo($tipo);

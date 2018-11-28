@@ -115,7 +115,7 @@ class Welcome extends CI_Controller {
 
 			switch ($res['tipo']) {
 				case 'e':
-						redirect('usuarios');
+						redirect(base_url().'usuarios');
 					break;
 				case 'a':
 						redirect('administrador');

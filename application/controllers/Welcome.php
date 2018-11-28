@@ -127,7 +127,7 @@ class Welcome extends CI_Controller {
 				//$this->load->view('formulario',$res);
 			}else{
 				$this->load->model('Sesion_model');
-				redirect('usuarios');
+				redirect('Usuarios');
 			}
 		}
 	}

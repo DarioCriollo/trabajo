@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		
+
 		//$this->load->view('welcome_message');
 			$this->load->view('principal');
 	}
@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('parlanateam');
 	}
 	public function Collaborators(){
-		$this->load->view('Collaborators');
+		$this->load->view('colaboradores');
 	}
 	public function home(){
 		$this->load->view('principal');

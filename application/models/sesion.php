@@ -6,6 +6,7 @@ class Sesion extends CI_Model {
 	{
 		parent::__construct();
 		$this->load->database();
+    
 	}
 
 	function consultar_usr(){

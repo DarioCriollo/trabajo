@@ -17,6 +17,8 @@ class Welcome extends CI_Controller {
 	}
 	public function about(){
 		$this->load->view('about');
+
+			$this->load->view('sesion');
 	}
 	public function parlanateam(){
 		$this->load->view('parlanateam');
@@ -105,11 +107,11 @@ class Welcome extends CI_Controller {
 		}else{
 			//por falso para ingresar
 			//echo "paso para ingresar";
-			$this->load->model('Sesion');
+			$this->load->model('sesion');
 
-			$res['mensaje']=$this->Sesion->consultar_usr();
+			$res['mensaje']=$this->sesion->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->Sesion->consultar_tipo($tipo);
+			$res['tipo']=$this->sesion->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {
 				case 'e':
@@ -124,7 +126,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				//$this->load->view('formulario',$res);
 			}else{
-				$this->load->model('Sesion');
+				$this->load->model('sesion');
 				redirect('usuarios');
 			}
 		}

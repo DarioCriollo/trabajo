@@ -96,7 +96,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function login(){
-		$this->load->model('sesion');
+		//$this->load->model('sesion');
 		$this->form_validation->set_rules('txtlog','login','required');
 		$this->form_validation->set_rules('txtcla','clave','required');
 		if ($this->form_validation->run()==FALSE) {
@@ -105,11 +105,11 @@ class Welcome extends CI_Controller {
 		}else{
 			//por falso para ingresar
 			//echo "paso para ingresar";
-			$this->load->model('sesion');
+			$this->load->model('Sesion');
 
-			$res['mensaje']=$this->sesion->consultar_usr();
+			$res['mensaje']=$this->Sesion->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->sesion->consultar_tipo($tipo);
+			$res['tipo']=$this->Sesion->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {
 				case 'e':
@@ -124,7 +124,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				//$this->load->view('formulario',$res);
 			}else{
-				$this->load->model('sesion');
+				$this->load->model('Sesion');
 				redirect('usuarios');
 			}
 		}

@@ -97,7 +97,7 @@ class Welcome extends CI_Controller {
 			$this->load->view('formulario');
 		}else{
 			//por falso para ingresar
-			echo "paso para ingresar";
+			//echo "paso para ingresar";
 			$this->load->model('m_sesion');
 			$res['mensaje']=$this->m_sesion->consultar_usr();
 			$tipo=$res;

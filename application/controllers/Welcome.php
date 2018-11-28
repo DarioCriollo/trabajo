@@ -96,7 +96,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function login(){
-			//$this->load->model('sesion');
+		$this->load->model('sesion');
 		$this->form_validation->set_rules('txtlog','login','required');
 		$this->form_validation->set_rules('txtcla','clave','required');
 		if ($this->form_validation->run()==FALSE) {
@@ -105,7 +105,7 @@ class Welcome extends CI_Controller {
 		}else{
 			//por falso para ingresar
 			//echo "paso para ingresar";
-			//$this->load->model('sesion');
+			$this->load->model('sesion');
 
 			$res['mensaje']=$this->sesion->consultar_usr();
 			$tipo=$res;

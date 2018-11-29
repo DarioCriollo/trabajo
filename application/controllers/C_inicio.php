@@ -1,5 +1,5 @@
 <?php
-	class Inicio extends CI_Controller{
+	class C_inicio extends CI_Controller{
 
 	function index(){
 	}

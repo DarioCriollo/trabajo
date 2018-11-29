@@ -183,7 +183,7 @@ var code =[];
 
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -248,7 +248,7 @@ var code =[];
 
 		function objects(){
 			$.ajax({
-				url:$("#url").val()+"inicio/objects",
+				url:$("#url").val()+"C_inicio/objects",
 				type:"post",
 				data:{},
 				beforeSend:function(){
@@ -395,7 +395,7 @@ var code =[];
 			//respuestas
 			mostrarPreg();
 			$.ajax({
-				url:$("#url").val()+"inicio/pregunta",
+				url:$("#url").val()+"C_inicio/pregunta",
 				type:"post",
 				data:{xpregunta:pregunta},
 				beforeSend:function(){
@@ -449,7 +449,7 @@ var code =[];
 			//respuestas
 
 			$.ajax({
-				url:$("#url").val()+"inicio/pregunta",
+				url:$("#url").val()+"C_inicio/pregunta",
 				type:"post",
 				data:{xpregunta:pregunta},
 				beforeSend:function(){
@@ -508,7 +508,7 @@ var code =[];
 			//respuestas
 
 			$.ajax({
-				url:$("#url").val()+"inicio/lectura",
+				url:$("#url").val()+"C_inicio/lectura",
 				type:"post",
 				data:{xpregunta:nuevo},
 				beforeSend:function(){
@@ -553,7 +553,7 @@ var code =[];
 			}
 
 			$.ajax({
-				url:$("#url").val()+"inicio/codesread",
+				url:$("#url").val()+"C_inicio/codesread",
 				type:"post",
 				data:{xdato:dari},
 				beforeSend:function(){
@@ -681,7 +681,7 @@ var code =[];
 			codigop=code;
 			//alert("codigo para traer respuestas : "+code);
 			$.ajax({
-				url:$("#url").val()+"inicio/busca",
+				url:$("#url").val()+"C_inicio/busca",
 				type:"post",
 				data:{xdato:code},
 				beforeSend:function(){
@@ -1194,7 +1194,7 @@ var code =[];
 			console.log('tamano de las fallidas'+vecfallidas.length+'nivel actual : '+nivelactual);
 
 			$.ajax({
-				url:$("#url").val()+"inicio/respuesta",
+				url:$("#url").val()+"C_inicio/respuesta",
 				type:"post",
 				data:{fallidas:fall,nivel:nivelactual,correct:temacorrectas,failed:temfailed},
 				beforeSend:function(){
@@ -1319,7 +1319,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1391,7 +1391,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1463,7 +1463,7 @@ var code =[];
 			 //alert(title);
 			 if(title!=""){
 			 $.ajax({
-				 url:$("#url").val()+"inicio/preguntastodo",
+				 url:$("#url").val()+"C_inicio/preguntastodo",
 				 type:"post",
 				 data:{xnivel:ata,title:title},
 				 beforeSend:function(){
@@ -1536,7 +1536,7 @@ var code =[];
 			//alert('tenemos title : '+title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){

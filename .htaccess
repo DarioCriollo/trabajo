@@ -3,4 +3,4 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /https://workfinal.herokuapp.com/index.php?/$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?/$1 [QSA,L]

@@ -6,9 +6,9 @@ class Usuarios extends CI_Controller {
 	{
 			parent::__construct();
 	}
-	public function index()
+ 	function index()
 	{
-		//$this->load->view('encabezado');
+		$this->load->view('encabezado');
 		if ($this->session->userdata('code')) {
 			$this->load->view('welcome_message');
 			$this->load->view('prueba');
@@ -18,7 +18,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('formulario',$res);
 		}
 	}
-	public function cerrar(){
+	function cerrar(){
 		$this->session->sess_destroy();
 		redirect('Welcome');
 	}

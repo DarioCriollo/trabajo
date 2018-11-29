@@ -1,6 +1,6 @@
 <?php
 	class Inicio extends CI_Controller{
-		
+
 	function index(){
 	}
 

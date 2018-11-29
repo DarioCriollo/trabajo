@@ -8,7 +8,6 @@ class E_users extends CI_Controller {
 	}
  	function index()
 	{
-		print_r('entra a index');
 		if ($this->session->userdata('code')) {
 			$this->load->view('welcome_message');
 			$this->load->view('prueba');

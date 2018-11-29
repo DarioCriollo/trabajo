@@ -1,7 +1,7 @@
 	<?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Questions extends CI_Model
+class Questions_model extends CI_Model
 {
 
 	function __construct()

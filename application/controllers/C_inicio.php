@@ -114,8 +114,8 @@
 	function preguntastodo(){
 		$xdato=$this->input->post('xnivel');
 		$title=$this->input->post('title');
-		$this->load->model('questions');
-		$resultados=$this->questions->nivelPreguntas($xdato,$title);
+		$this->load->model('Questions_model');
+		$resultados=$this->Questions_model->nivelPreguntas($xdato,$title);
 		echo json_encode($resultados);
 	}
 

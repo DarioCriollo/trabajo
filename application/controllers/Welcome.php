@@ -116,7 +116,7 @@ class Welcome extends CI_Controller {
 			switch ($res['tipo']) {
 				case 'e':
 						print_r('entra a estudiantes');
-						//redirect('Usuarios');
+						redirect('Usuarios');
 					break;
 				case 'a':
 						redirect('administrador');
@@ -128,7 +128,7 @@ class Welcome extends CI_Controller {
 				//$this->load->view('formulario',$res);
 			}else{
 				$this->load->model('Sesion_model');
-				redirect('Usuarios');
+				//redirect('Usuarios');
 			}
 		}
 	}
@@ -150,7 +150,7 @@ class Welcome extends CI_Controller {
 			$carrer=$this->input->post('txtcarrer');
 			$email=$this->input->post('txtemail');
 			$clave=$this->input->post('txtcla');
-			$this->load->model('sesion');
+			$this->load->model('Sesion_model');
 			$res['mensaje']=$this->sesion->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
 				if($res['mensaje']=='the code already exists'){
 					$this->load->view('plantilla');

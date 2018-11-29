@@ -110,7 +110,8 @@ class Welcome extends CI_Controller {
 			$this->load->model('Sesion_model');
 
 			$res['mensaje']=$this->Sesion_model->consultar_usr();
-			$tipo=$res;
+			//$tipo=$res;
+			$tipo=$res['mensaje'][0]['kind'];
 			$res['tipo']=$this->Sesion_model->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {

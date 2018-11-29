@@ -8,7 +8,7 @@ class Usuarios extends CI_Controller {
 	}
  	function index()
 	{
-		$this->load->view('encabezado');
+		print_r('entra a index');
 		if ($this->session->userdata('code')) {
 			$this->load->view('welcome_message');
 			$this->load->view('prueba');

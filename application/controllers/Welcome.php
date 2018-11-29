@@ -118,7 +118,8 @@ class Welcome extends CI_Controller {
 			switch ($res['tipo']) {
 				case 'e':
 						print_r('entra a estudiantes');
-						redirect('Usuarios');
+						header ('Location: https://workfinal.herokuapp.com/Usuarios');
+						//redirect('Usuarios');
 					break;
 				case 'a':
 						redirect('administrador');

@@ -111,6 +111,7 @@ class Welcome extends CI_Controller {
 
 			$res['mensaje']=$this->Sesion_model->consultar_usr();
 			//$tipo=$res;
+			print_r($res);
 			$tipo=$res['mensaje'][0]['kind'];
 			$res['tipo']=$this->Sesion_model->consultar_tipo($tipo);
 

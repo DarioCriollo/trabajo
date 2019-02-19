@@ -13,7 +13,7 @@ class E_users extends CI_Controller {
 		$this->load->view('prueba');
 	}else{
 		$res['mensaje']="Incorrect Username or Password";
-			//$this->load->view('plantilla');
+			$this->load->view('plantilla');
 			$this->load->view('formulario',$res);
 	}
 	}

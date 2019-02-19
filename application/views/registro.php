@@ -20,7 +20,7 @@
         <p>Lastname</p>
 				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required>
 				<p>Code</p>
-				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onkeypress="ValidaSoloNumeros();">
+				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;">
 				<!-- <p>Semester</p>
 				<input type="text" name="txtsemester" id="txtcla" placeholder="Semester" required onkeypress="ValidaSoloNumeros();"> -->
 				<p>Semester</p>

@@ -20,7 +20,7 @@
         <p>Lastname</p>
 				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required>
 				<p>Code</p>
-				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;">
+				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onblur="validaNumericos();">
 				<!-- <p>Semester</p>
 				<input type="text" name="txtsemester" id="txtcla" placeholder="Semester" required onkeypress="ValidaSoloNumeros();"> -->
 				<p>Semester</p>
@@ -86,12 +86,26 @@
 		}
 
 		function pruebaemail (valor){
-	re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
-	if(!re.exec(valor)){
-		alert('email no valido');
-	}
-	else alert('email valido');
-	}
+			re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+			if(!re.exec(valor)){
+				alert('email no valido');
+			}
+			else alert('email valido');
+			}
+
+
+	function validaNumericos(){
+		 var inputtxt = document.getElementById('text');
+		 var valor = inputtxt.value;
+		 for(i=0;i<valor.length;i++){
+		     var code=valor.charCodeAt(i);
+		         if(code<=48 || code>=57){
+		           inputtxt.value="";
+		           return;
+		         }
+		   }
+
+		}
 
 		</script>
 	</body>

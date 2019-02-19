@@ -84,7 +84,7 @@
 
                   <!--Card image-->
                   <div class="view overlay">
-                     <img src="<?php echo base_url();?>assets/dist/img/glyp1.png" class="userfinal" /><br><br><br><br><br><br>
+                     <img src="<?php echo base_url();?>assets/dist/img/glyp2.png" class="userfinal" /><br><br><br><br><br><br>
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>

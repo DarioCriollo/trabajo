@@ -71,7 +71,9 @@
               <h4 class="card-title"><strong>Joaquin Patiño</strong></h4>
               <h5 class="indigo-text"><strong>Investigador</strong></h5>
 
-              <p style="text-align:justify;" class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam. </p>
+              <p style="text-align:justify;" class="card-text">Universidad de Nariño</p>
+              <p style="text-align:justify;" class="card-text">San Juan de Pasto</p>
+              <p style="text-align:justify;" class="card-text">2019</p>
 
             </div>
             <!--/.Card content-->
@@ -98,9 +100,9 @@
               <h4 class="card-title"><strong>Dario Criollo</strong></h4>
               <h5 class="indigo-text"><strong>Investigador</strong></h5>
 
-              <p style="text-align:justify;" class="card-text">Sed ut perspiciatis unde omnis iste natus
-                sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-              </p>
+              <p style="text-align:justify;" class="card-text">Universidad de Nariño</p>
+              <p style="text-align:justify;" class="card-text">San Juan de Pasto</p>
+              <p style="text-align:justify;" class="card-text">2019</p>
 
             </div>
             <!--/.Card content-->

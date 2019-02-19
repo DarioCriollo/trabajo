@@ -29,7 +29,7 @@ class Sesion_model extends CI_Model {
 		}
 	}
   function consultar_tipo($tipo){
-    $tipo1=$tipo[0]['kind'];
+    $tipo1=$tipo['mensaje'][0]['kind'];
     switch ($tipo1) {
       case 'e':
         return 'e';

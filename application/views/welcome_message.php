@@ -285,7 +285,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div> -->
                 <div class="pull-right">
-                  <a href="<?php echo base_url();?>usuarios/cerrar" class='btn btn-default btn-flat' style="background:#4DB6AC">Sign out</a>
+                  <a href="<?php echo base_url();?>E_users/cerrar" class='btn btn-default btn-flat' style="background:#4DB6AC">Sign out</a>
                 </div>
               </li>
             </ul>

@@ -101,9 +101,9 @@
 
 		//echo var_dump($xvector);
 		//print_r($xvector);
-		$this->load->model('reglasc1');
+		$this->load->model('Reglasc1_model');
 
-		$resultados=$this->reglasc1->reglasInferencia($xvector,$xnivel,$correct,$failed);
+		$resultados=$this->Reglasc1_model->reglasInferencia($xvector,$xnivel,$correct,$failed);
 
 		//$this->questions->conteoFallidas($xvector);
 		//print_r($resultados);

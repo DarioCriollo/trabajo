@@ -194,7 +194,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 
 					encabezado=obj[0]['contenido'];
@@ -213,7 +213,7 @@ var code =[];
 
 
 					text=obj[0]['content'];
-					console.log('este es mi texto'+text);
+					//console.log('este es mi texto'+text);
 					if(text=='Questions' || text=='Question'){
 						ocultaMedia();
 					}else{
@@ -226,13 +226,13 @@ var code =[];
 					for(var i=0; i<obj.length; i++){
 					nuevo1[i]=obj[i]['question'];
 					}
-					console.log('criollo'+nuevo1);
+					//console.log('criollo'+nuevo1);
 					for(var i=0; i<obj.length; i++){
 						objeto[i]=obj[i];
 					}
 
-					console.log("tenemos las preguntas"+nuevo1);
-					console.log("tenemos los objetos con atributo"+objeto);
+					//console.log("tenemos las preguntas"+nuevo1);
+					//console.log("tenemos los objetos con atributo"+objeto);
 					llenarPreguntas(nuevo1,objeto);
 
 				},
@@ -259,7 +259,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 					for(var i=0; i<obj.length; i++){
 						a1[i]=obj[i];
@@ -291,8 +291,8 @@ var code =[];
 					objetos[i]=objec[i];
 			}
 
-			console.log("datos nuevos"+nuevo);
-			console.log("objetos nuevos saber nivel"+objetos[0]['level']);
+			//console.log("datos nuevos"+nuevo);
+			//console.log("objetos nuevos saber nivel"+objetos[0]['level']);
 			nivel=objetos[0]['level'];
 
 			//alert('nivel en el que estamos : '+nivel);
@@ -305,7 +305,7 @@ var code =[];
 			if(item=='Listening'){
 				muestraAudios();
 			}
-			console.log("esta contiene la variable de nivel dario"+nivel+'oveja');
+			//console.log("esta contiene la variable de nivel dario"+nivel+'oveja');
 
 			if(nivel=='A1'){
 
@@ -375,10 +375,10 @@ var code =[];
 			Formula una pregunta al usuario...
 		*/
 		function hazPregunta(){
-			console.log('entro');
+			//console.log('entro');
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+			//console.log('Que tenemos de nuevo : '+nuevo);
 
 			value=numAleat(0,nuevo.length-1);
 			elemento=value;
@@ -388,7 +388,7 @@ var code =[];
 			e = nuevo.splice( value, 1 );
 
 			var pregunta = e;			// se guardan la pregunta y la respuesta
-			console.log("pregunta elegida"+pregunta);
+			//console.log("pregunta elegida"+pregunta);
 			//alert('pregunta elegida'+pregunta);
 			//alert("pregunta elegida"+pregunta);
 			// comparamos pregunta y traemos el codigo de ella para segun eso traer las
@@ -412,7 +412,7 @@ var code =[];
 					for(i=0;i<obj.length;i++){
 					dar=(obj[i]['code_question']);
 					}
-					console.log("listo"+dar);
+				//	console.log("listo"+dar);
 					respuestas(dar);
 
 				},
@@ -428,11 +428,11 @@ var code =[];
 		///cambio
 		var countr=0;
 		function hazpreguntaR(){
-			console.log('entro');
+			//console.log('entro');
 			var countr=0;
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+			//console.log('Que tenemos de nuevo : '+nuevo);
 
 			// value=numAleat(0,nuevo.length-1);
 			value=countr;
@@ -442,7 +442,7 @@ var code =[];
 			// se extrae una pregunta/respuesta al azar del array...
 			e = nuevo.splice( value, 1 );
 			var pregunta = e;			// se guardan la pregunta y la respuesta
-			console.log("pregunta elegida"+pregunta);
+			//console.log("pregunta elegida"+pregunta);
 			//alert('pregunta elegida'+pregunta);
 			//alert("pregunta elegida"+pregunta);
 			// comparamos pregunta y traemos el codigo de ella para segun eso traer las
@@ -466,7 +466,7 @@ var code =[];
 					for(i=0;i<obj.length;i++){
 					dar=(obj[i]['code_question']);
 					}
-					console.log("listo"+dar);
+				//	console.log("listo"+dar);
 					respuestas(dar);
 
 				},
@@ -481,11 +481,11 @@ var code =[];
 
 		var countr=0;
 		function hazpreguntaRB(){
-			console.log('entro');
+			//console.log('entro');
 			var countr=0;
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+			//console.log('Que tenemos de nuevo : '+nuevo);
 
 			// value=numAleat(0,nuevo.length-1);
 			value=countr;
@@ -515,8 +515,8 @@ var code =[];
 					$("#resultados").html("espere un momento ......");
 				},
 				success:function(datos){
-					 console.log('ojoooooo');
-					console.log(datos);
+				//	 console.log('ojoooooo');
+				//	console.log(datos);
 					var obj = JSON.parse(datos);
 					// pre="";
 					// console.log(obj);
@@ -560,10 +560,10 @@ var code =[];
 					$("#resultados").html("espere un momento ......");
 				},
 				success:function(dat){
-					console.log('vivosssssss');
-					console.log(dat);
+					//console.log('vivosssssss');
+					//console.log(dat);
 					var obj = JSON.parse(dat);
-					console.log('darito'+obj.length);
+					//console.log('darito'+obj.length);
 					answertext="";
 
 					respues[0]=(obj[0]['option_one']);
@@ -654,7 +654,7 @@ var code =[];
 									answertext +='<input   id="test5" type="radio" value="'+i+'" name="radio-group5" > <label>'+respues4[i]+'</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 								}
 					}
-					console.log(answertext);
+					//console.log(answertext);
 
 					if (code==100 || code==110) {
 						text = document.getElementById('text');
@@ -718,7 +718,7 @@ var code =[];
 						}
 
 					}
-					console.log(answertext);
+					//console.log(answertext);
 
 					if (code==100 || code==110) {
 						text = document.getElementById('text');
@@ -784,7 +784,7 @@ var code =[];
 		document.getElementById('boton').addEventListener('click', function(){
 			var miAudio=document.getElementById("player");
 			miAudio.pause();
-			console.log('el conteo es : '+contador);
+			//console.log('el conteo es : '+contador);
 
 
 			var entradatext = document.getElementById("dato").value;
@@ -832,8 +832,8 @@ var code =[];
 				verdadera3=correc3[8];
 				verdadera4=correc4[8];
 
-			console.log("entrada radio"+entrada+"tamaño elegido"+tamaño);
-			console.log('verdadera : '+verdadera+'elegida : '+elegida);
+			//console.log("entrada radio"+entrada+"tamaño elegido"+tamaño);
+			//console.log('verdadera : '+verdadera+'elegida : '+elegida);
 			//if (elegida==verdadera) {
 			//	console.log("ok acertaste viejo");
 			//}else{
@@ -854,12 +854,12 @@ var code =[];
 				case 1:
 					contador++;
 					if (verdadera==elegida) {
-						console.log('este es el codigop : '+codigop);
+				//		console.log('este es el codigop : '+codigop);
 						vecacertadas[acert]=codigop;
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+					//	console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 
 					}else{
 							vecfallidas[fallid]=codigop;
@@ -869,7 +869,7 @@ var code =[];
 					//aqui
 
 					if(formuladas<limitepreguntas){
-						console.log('que pasa'+formuladas);
+						//console.log('que pasa'+formuladas);
 						if(item=='Reading'){
 							hazpreguntaR();
 						}else{
@@ -956,56 +956,56 @@ var code =[];
 				//alert('exelente');
 					contador+=5;
 					if (verdadera==elegida) {
-						console.log('este es el codigop : '+codigoq[0]);
+						//console.log('este es el codigop : '+codigoq[0]);
 						vecacertadas[acert]=codigoq[0];
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+						//console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 					}else{
 							vecfallidas[fallid]=codigoq[0];
 							fallid++;
 					}
 					if (verdadera1==elegida1) {
-						console.log('este es el codigop : '+codigoq[1]);
+						//console.log('este es el codigop : '+codigoq[1]);
 						vecacertadas[acert]=codigoq[1];
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+						//console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 					}else{
 							vecfallidas[fallid]=codigoq[1];
 							fallid++;
 					}
 					if (verdadera2==elegida2) {
-						console.log('este es el codigop : '+codigoq[2]);
+						//console.log('este es el codigop : '+codigoq[2]);
 						vecacertadas[acert]=codigoq[2];
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+						//console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 					}else{
 							vecfallidas[fallid]=codigoq[2];
 							fallid++;
 					}
 					if (verdadera3==elegida3) {
-						console.log('este es el codigop : '+codigoq[3]);
+						//console.log('este es el codigop : '+codigoq[3]);
 						vecacertadas[acert]=codigoq[3];
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+						//console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 					}else{
 							vecfallidas[fallid]=codigoq[3];
 							fallid++;
 					}
 					if (verdadera4==elegida4) {
-						console.log('este es el codigop : '+codigoq[4]);
+						//console.log('este es el codigop : '+codigoq[4]);
 						vecacertadas[acert]=codigoq[4];
-						console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
+						//console.log('acertadas : '+vecacertadas.length+'todo'+vecacertadas[0]);
 						acert++;
 						//alert("codigos de acertadas"+vecacertadas);
-						console.log("ok acertaste viejo");
+						//console.log("ok acertaste viejo");
 					}else{
 							vecfallidas[fallid]=codigoq[4];
 							fallid++;
@@ -1014,7 +1014,7 @@ var code =[];
 					//aqui
 
 					if(formuladas<limitepreguntas){
-						console.log('que pasa'+formuladas);
+						//console.log('que pasa'+formuladas);
 						if(item=='Reading'){
 							hazpreguntaR();
 						}else{
@@ -1079,12 +1079,12 @@ var code =[];
 		function muestraResultado(){
 					//alert('objetos : '+objetos);
 					//document.write(vecfallidas);
-          console.log("estes son los elementos para analizar  correctas"+vecacertadas);
-          console.log("estes son los elementos para analizar  fallidas"+vecfallidas);
+          //console.log("estes son los elementos para analizar  correctas"+vecacertadas);
+          //console.log("estes son los elementos para analizar  fallidas"+vecfallidas);
           for(var i=0; i<vecfallidas.length; i++){
-							console.log("veamos que tiene fallidas"+vecfallidas[i]);
+						//	console.log("veamos que tiene fallidas"+vecfallidas[i]);
           	for(var j=0; j<a1.length; j++){
-							console.log("veamos que tiene objeto"+a1[j]['code_question']);
+							//console.log("veamos que tiene objeto"+a1[j]['code_question']);
           		if (vecfallidas[i]==a1[j]['code_question']) {
 								//alert('son iguales'+a1[j]['code_question']+'mas'+vecfallidas[i]);
           			//console.log("tenemos el objeto"+objetos[i]['id_preg']+"con el"+vecfallidas[j]);
@@ -1094,9 +1094,9 @@ var code =[];
           	}
           }
 					for(var i=0; i<vecacertadas.length; i++){
-							console.log("veamos que tiene fallidas"+vecacertadas[i]);
+							//console.log("veamos que tiene fallidas"+vecacertadas[i]);
 						for(var j=0; j<a1.length; j++){
-							console.log("veamos que tiene objeto"+a1[j]['code_question']);
+							//console.log("veamos que tiene objeto"+a1[j]['code_question']);
 							if (vecacertadas[i]==a1[j]['code_question']) {
 								//alert('son iguales'+a1[j]['code_question']+'mas'+vecacertadas[i]);
 								//console.log("tenemos el objeto"+objetos[i]['id_preg']+"con el"+vecfallidas[j]);
@@ -1108,17 +1108,17 @@ var code =[];
 					}
 					//alert('fallidas'+temfailed);
 					//alert('correctas'+temacorrectas);
-					console.log('correct'+temacorrectas);
+					//console.log('correct'+temacorrectas);
 
 
 				//	alert("como se envia las fallidas"+temafallidas);
 				//	alert("como se envia las correctas"+temacorrectas);
-          console.log("tenemos los temas de las fallidas"+temfailed);
           //tenemos que hacer coincidir que la pregunta acerta con el objeto de objetos
+					//console.log("tenemos los temas de las fallidas"+temfailed);
           //para comparar los atributos de igual manera para la fallidas
 					//veamos
 					if (nivel=='A1' && (vecfallidas.length==0)) {
-						console.log('se me tio a qui');
+						//console.log('se me tio a qui');
 						enviaResultado();
 					}
 					if (nivel=='A1' && (vecfallidas.length>0 && vecfallidas.length<=4)) {
@@ -1249,7 +1249,7 @@ var code =[];
 					}
 					if(obj=='falseB1'){
 						ocultarTodo();
-						var result='<p>Your Level A2 + </p><br><p>you must improve in Listening level A2</p>';
+						var result='<p>Your Level A2 + </p><br><p>you must improve in Listening level A2 +</p>';
 						document.getElementById('mensaje').innerHTML=result;
 							document.getElementById("imagen").innerHTML='<img src="../assets/dist/img/medio.png" />';
  				 		$(document).ready(function()
@@ -1330,7 +1330,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 
 					encabezado=obj[0]['contenido'];
@@ -1345,7 +1345,7 @@ var code =[];
 
 					///
 					text=obj[0]['content'];
-						console.log('este es mi texto'+text);
+						//console.log('este es mi texto'+text);
 						if(text=='Questions' || text=='Question'){
 							ocultaMedia();
 						}else{
@@ -1362,8 +1362,8 @@ var code =[];
 						objeto[i]=obj[i];
 					}
 
-					console.log("tenemos las preguntas"+nuevo1);
-					console.log("tenemos los objetos con atributo"+objeto);
+					// console.log("tenemos las preguntas"+nuevo1);
+					// console.log("tenemos los objetos con atributo"+objeto);
 					llenarPreguntas(nuevo1,objeto);
 
 				},
@@ -1402,7 +1402,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 
 					encabezado=obj[0]['contenido'];
@@ -1420,7 +1420,7 @@ var code =[];
 
 
 					text=obj[0]['content'];
-						console.log('este es mi texto'+text);
+						//console.log('este es mi texto'+text);
 						//document.getElementById('encabezado').innerHTML = text;
 
 							$('#player').attr('src',text);
@@ -1429,13 +1429,13 @@ var code =[];
 					for(var i=0; i<obj.length; i++){
 					nuevo1[i]=obj[i]['question'];
 					}
-					console.log('criollo'+nuevo1);
+					//console.log('criollo'+nuevo1);
 					for(var i=0; i<obj.length; i++){
 						objeto[i]=obj[i];
 					}
 
-					console.log("tenemos las preguntas"+nuevo1);
-					console.log("tenemos los objetos con atributo"+objeto);
+				//	console.log("tenemos las preguntas"+nuevo1);
+					//console.log("tenemos los objetos con atributo"+objeto);
 					llenarPreguntas(nuevo1,objeto);
 
 				},
@@ -1506,8 +1506,8 @@ var code =[];
 						 objeto[i]=obj[i];
 					 }
 
-					 console.log("tenemos las preguntas"+nuevo1);
-					 console.log("tenemos los objetos con atributo"+objeto);
+					 //console.log("tenemos las preguntas"+nuevo1);
+					 //console.log("tenemos los objetos con atributo"+objeto);
 					 llenarPreguntas(nuevo1,objeto);
 
 				 },
@@ -1543,11 +1543,11 @@ var code =[];
 					$("#resultados").html("espere un momento ......");
 				},
 				success:function(datos){
-					console.log('datos'+datos);
+					//console.log('datos'+datos);
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 
 					encabezado=obj[0]['contenido'];
@@ -1562,7 +1562,7 @@ var code =[];
 
 					///
 					text=obj[0]['content'];
-						console.log('este es mi texto'+text);
+						//console.log('este es mi texto'+text);
 						//document.getElementById('encabezado').innerHTML = text;
 
 							$('#player').attr('src',text);
@@ -1576,8 +1576,8 @@ var code =[];
 						objeto[i]=obj[i];
 					}
 
-					console.log("tenemos las preguntas"+nuevo1);
-					console.log("tenemos los objetos con atributo"+objeto);
+					//console.log("tenemos las preguntas"+nuevo1);
+					//console.log("tenemos los objetos con atributo"+objeto);
 					llenarPreguntas(nuevo1,objeto);
 
 				},

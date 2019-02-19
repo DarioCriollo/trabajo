@@ -194,7 +194,7 @@ var code =[];
 
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -205,7 +205,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 
 					encabezado=obj[0]['contenido'];
@@ -224,7 +224,7 @@ var code =[];
 
 
 					text=obj[0]['content'];
-					console.log('este es mi texto'+text);
+					//console.log('este es mi texto'+text);
 					if(text=='Questions' || text=='Question'){
 						ocultaMedia();
 					}else{
@@ -237,13 +237,13 @@ var code =[];
 					for(var i=0; i<obj.length; i++){
 					nuevo1[i]=obj[i]['question'];
 					}
-					console.log('criollo'+nuevo1);
+				//	console.log('criollo'+nuevo1);
 					for(var i=0; i<obj.length; i++){
 						objeto[i]=obj[i];
 					}
 
-					console.log("tenemos las preguntas"+nuevo1);
-					console.log("tenemos los objetos con atributo"+objeto);
+					// console.log("tenemos las preguntas"+nuevo1);
+					// console.log("tenemos los objetos con atributo"+objeto);
 					llenarPreguntas(nuevo1,objeto);
 
 				},
@@ -259,7 +259,7 @@ var code =[];
 
 		function objects(){
 			$.ajax({
-				url:$("#url").val()+"inicio/objects",
+				url:$("#url").val()+"C_inicio/objects",
 				type:"post",
 				data:{},
 				beforeSend:function(){
@@ -270,7 +270,7 @@ var code =[];
 					var obj = JSON.parse(datos);
 					//console.log("preguntas nivel A1"+obj);
 					//console.log('tamano'+obj.length);
-					console.log(obj);
+					//console.log(obj);
 
 					for(var i=0; i<obj.length; i++){
 						a1[i]=obj[i];
@@ -302,8 +302,8 @@ var code =[];
 					objetos[i]=objec[i];
 			}
 
-			console.log("datos nuevos"+nuevo);
-			console.log("objetos nuevos saber nivel"+objetos[0]['level']);
+			// console.log("datos nuevos"+nuevo);
+			// console.log("objetos nuevos saber nivel"+objetos[0]['level']);
 			nivel=objetos[0]['level'];
 
 			//alert('nivel en el que estamos : '+nivel);
@@ -316,7 +316,7 @@ var code =[];
 			if(item=='Listening'){
 				muestraAudios();
 			}
-			console.log("esta contiene la variable de nivel dario"+nivel+'oveja');
+			// console.log("esta contiene la variable de nivel dario"+nivel+'oveja');
 
 			if(nivel=='A1'){
 
@@ -421,10 +421,10 @@ var code =[];
 			Formula una pregunta al usuario...
 		*/
 		function hazPregunta(){
-			console.log('entro');
+			//console.log('entro');
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+			//console.log('Que tenemos de nuevo : '+nuevo);
 
 			value=numAleat(0,nuevo.length-1);
 			elemento=value;
@@ -434,14 +434,14 @@ var code =[];
 			e = nuevo.splice( value, 1 );
 
 			var pregunta = e;			// se guardan la pregunta y la respuesta
-			console.log("pregunta elegida"+pregunta);
+			//console.log("pregunta elegida"+pregunta);
 			//alert('pregunta elegida'+pregunta);
 			//alert("pregunta elegida"+pregunta);
 			// comparamos pregunta y traemos el codigo de ella para segun eso traer las
 			//respuestas
 			mostrarPreg();
 			$.ajax({
-				url:$("#url").val()+"inicio/pregunta",
+				url:$("#url").val()+"C_inicio/pregunta",
 				type:"post",
 				data:{xpregunta:pregunta},
 				beforeSend:function(){
@@ -458,7 +458,7 @@ var code =[];
 					for(i=0;i<obj.length;i++){
 					dar=(obj[i]['code_question']);
 					}
-					console.log("listo"+dar);
+					//console.log("listo"+dar);
 					respuestas(dar);
 
 				},
@@ -474,11 +474,11 @@ var code =[];
 		///cambio
 		var countr=0;
 		function hazpreguntaR(){
-			console.log('entro');
+			//console.log('entro');
 			var countr=0;
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+			//console.log('Que tenemos de nuevo : '+nuevo);
 
 			// value=numAleat(0,nuevo.length-1);
 			value=countr;
@@ -488,14 +488,14 @@ var code =[];
 			// se extrae una pregunta/respuesta al azar del array...
 			e = nuevo.splice( value, 1 );
 			var pregunta = e;			// se guardan la pregunta y la respuesta
-			console.log("pregunta elegida"+pregunta);
+			//console.log("pregunta elegida"+pregunta);
 			//alert('pregunta elegida'+pregunta);
 			//alert("pregunta elegida"+pregunta);
 			// comparamos pregunta y traemos el codigo de ella para segun eso traer las
 			//respuestas
 
 			$.ajax({
-				url:$("#url").val()+"inicio/pregunta",
+				url:$("#url").val()+"C_inicio/pregunta",
 				type:"post",
 				data:{xpregunta:pregunta},
 				beforeSend:function(){
@@ -512,7 +512,7 @@ var code =[];
 					for(i=0;i<obj.length;i++){
 					dar=(obj[i]['code_question']);
 					}
-					console.log("listo"+dar);
+					//console.log("listo"+dar);
 					respuestas(dar);
 
 				},
@@ -528,11 +528,11 @@ var code =[];
 		var countr=0;
 
 		function hazpreguntaRB(){
-			console.log('entro');
+		//	console.log('entro');
 			var countr=0;
 			var val;
 			var e,a;			// simple variable auxiliar
-			console.log('Que tenemos de nuevo : '+nuevo);
+		//	console.log('Que tenemos de nuevo : '+nuevo);
 
 			// value=numAleat(0,nuevo.length-1);
 			value=countr;
@@ -555,7 +555,7 @@ var code =[];
 			//respuestas
 
 			$.ajax({
-				url:$("#url").val()+"inicio/lectura",
+				url:$("#url").val()+"C_inicio/lectura",
 				type:"post",
 				data:{xpregunta:nuevo},
 				beforeSend:function(){
@@ -600,7 +600,7 @@ var code =[];
 			}
 
 			$.ajax({
-				url:$("#url").val()+"inicio/codesread",
+				url:$("#url").val()+"C_inicio/codesread",
 				type:"post",
 				data:{xdato:dari},
 				beforeSend:function(){
@@ -728,7 +728,7 @@ var code =[];
 			codigop=code;
 			//alert("codigo para traer respuestas : "+code);
 			$.ajax({
-				url:$("#url").val()+"inicio/busca",
+				url:$("#url").val()+"C_inicio/busca",
 				type:"post",
 				data:{xdato:code},
 				beforeSend:function(){
@@ -1297,7 +1297,7 @@ var code =[];
 			console.log('tamano de las fallidas'+vecfallidas.length+'nivel actual : '+nivelactual);
 
 			$.ajax({
-				url:$("#url").val()+"inicio/respuestac1",
+				url:$("#url").val()+"C_inicio/respuestac1",
 				type:"post",
 				data:{fallidas:fall,nivel:nivelactual,correct:temacorrectas,failed:temfailed},
 				beforeSend:function(){
@@ -1472,7 +1472,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1544,7 +1544,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1616,7 +1616,7 @@ var code =[];
 			 //alert(title);
 			 if(title!=""){
 			 $.ajax({
-				 url:$("#url").val()+"inicio/preguntastodo",
+				 url:$("#url").val()+"C_inicio/preguntastodo",
 				 type:"post",
 				 data:{xnivel:ata,title:title},
 				 beforeSend:function(){
@@ -1689,7 +1689,7 @@ var code =[];
 			//alert('tenemos title : '+title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1758,7 +1758,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1830,7 +1830,7 @@ var code =[];
 			//alert('tenemos title : '+title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1899,7 +1899,7 @@ var code =[];
 			//alert(title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){
@@ -1971,7 +1971,7 @@ var code =[];
 			//alert('tenemos title : '+title);
 			if(title!=""){
 			$.ajax({
-				url:$("#url").val()+"inicio/preguntastodo",
+				url:$("#url").val()+"C_inicio/preguntastodo",
 				type:"post",
 				data:{xnivel:ata,title:title},
 				beforeSend:function(){

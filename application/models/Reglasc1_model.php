@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Reglasc1 extends CI_Model
+class Reglasc1_model extends CI_Model
 {
 
 function __construct()

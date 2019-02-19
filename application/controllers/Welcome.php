@@ -36,8 +36,8 @@ class Welcome extends CI_Controller {
 	public function graph(){
 			$this->load->view('admin/plantillaadmin');
 		$carrer=$this->input->post('txtcarrer');
-			$this->load->model('graficos');
-			$datos["program"]=$this->graficos->graphCarrer($carrer);
+			$this->load->model('Graficos_model');
+			$datos["program"]=$this->Graficos_model->graphCarrer($carrer);
 			$this->load->view("admin/graphProgram",$datos);
 	}
 	public function graficas(){
@@ -45,55 +45,55 @@ class Welcome extends CI_Controller {
 	}
 	public function graficos(){
 		$this->load->view('welcome_message');
-		$this->load->model('graficos');
-		$datos["autos"]=$this->graficos->busca();
+		$this->load->model('Graficos_model');
+		$datos["autos"]=$this->Graficos_model->busca();
 		$this->load->view("graphics",$datos);
 	}
 	public function themes(){
 		$this->load->view('welcome_message');
-		$this->load->model('graficos');
-		$datos["autos"]=$this->graficos->buscaThemes();
+		$this->load->model('Graficos_model');
+		$datos["autos"]=$this->Graficos_model->buscaThemes();
 		$this->load->view("themes",$datos);
 	}
 	public function themesadmin(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->Themesadmin();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->Themesadmin();
 		$this->load->view("admin/drilllevel",$datos);
 	}
 	public function listadmin(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->listAdmin();
+		$this->load->model('Graficos');
+		$datos["datos"]=$this->Graficos_model->listAdmin();
 		$this->load->view("admin/listadmin",$datos);
 	}
 	public function report(){
 		$this->load->view('welcome_message');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->reportThemes();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->reportThemes();
 		$this->load->view("report",$datos);
 	}
 	public function reportstudents(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->reportStudents();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->reportStudents();
 		$this->load->view("reportEstudent",$datos);
 	}
 	public function graphicstudents(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->graphicStudents();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->graphicStudents();
 		$this->load->view("graphicstudents",$datos);
 		//$this->load->view("admin/drilllevel",$datos);
 	}
 	public function datos(){
 		//$this->load->view('welcome_message');
 		$this->load->view('welcome_message');
-		$this->load->model('graficos');
+		$this->load->model('Graficos_model');
 		//$result=$this->autos->busca();
 		//echo json_encode($result);
 		//$this->load->view('datos');
-		$datos["autos"]=$this->graficos->niveles();
+		$datos["autos"]=$this->Graficos_model->niveles();
 		$this->load->view("datos",$datos);
 	}
 

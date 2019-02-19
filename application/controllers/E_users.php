@@ -9,13 +9,13 @@ class E_users extends CI_Controller {
  	function index()
 	{
 		if ($this->session->userdata('code')) {
-			$this->load->view('welcome_message');
-			$this->load->view('prueba');
-		}else{
-			$res['mensaje']="Incorrect Username or Password";
-				$this->load->view('plantilla');
-		$this->load->view('formulario',$res);
-		}
+		$this->load->view('welcome_message');
+		$this->load->view('prueba');
+	}else{
+		$res['mensaje']="Incorrect Username or Password";
+			$this->load->view('plantilla');
+			$this->load->view('formulario',$res);
+	}
 	}
 	function cerrar(){
 		$this->session->sess_destroy();

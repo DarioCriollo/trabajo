@@ -17,7 +17,7 @@ class Sesion_model extends CI_Model {
 		$res=$this->db->get('users');
 
 		if ($res->num_rows()==0) {
-			return 'usuario no existe';
+			return 'Incorrect Username or Password';
 		}else{
 			$reg=$res->row();
 			$this->session->set_userdata('nickname',$reg->nickname);

@@ -127,17 +127,6 @@ class Welcome extends CI_Controller {
 						break;
 				}
 			}
-			// else{
-			// 	print($res['tipo']);
-			// 	if($res['tipo']=='e'){
-			// 		$this->load->model('Sesion_model');
-			// 		redirect('E_users');
-			// 	}else{
-			// 		redirect('C_administrador');
-			//
-			// 	}
-			//
-			// }
 		}
 	}
 

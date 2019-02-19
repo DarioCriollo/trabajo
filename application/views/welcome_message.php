@@ -281,9 +281,9 @@
               </li> -->
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                <!-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                </div> -->
                 <div class="pull-right">
                   <a href="<?php echo base_url();?>usuarios/cerrar" class='btn btn-default btn-flat' style="background:#4DB6AC">Sign out</a>
                 </div>
@@ -368,7 +368,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url ();?>Welcome/report" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Report Themes</a><li>
+            <li><a href="<?php echo base_url ();?>Welcome/report" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Report Test</a><li>
             <!-- <li><a href="<?php echo base_url ();?>Welcome/reportstudents" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Report students</a><li> -->
                 <!-- <li><a href="<?php echo base_url ();?>Welcome/graphicstudents" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Graphic students</a><li> -->
             <!-- <li><a href="<?php echo base_url ();?>inicio/historial"><i class="fa fa-circle-o"></i>Tu Historial</a></li> -->
@@ -381,10 +381,7 @@
 
         <!-- <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
 
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+
       </ul>
     </section>
     <!-- /.sidebar -->

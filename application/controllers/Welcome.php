@@ -105,20 +105,15 @@ class Welcome extends CI_Controller {
 			$this->load->view('formulario');
 		}else{
 			//por falso para ingresar
-			//echo "paso para ingresar";
-			$this->load->model('Sesion_model');
-
-			$res['mensaje']=$this->Sesion_model->consultar_usr();
-			//$tipo=$res;
-			print_r($res);
+			echo "paso para ingresar";
+			$this->load->model('m_sesion');
+			$res['mensaje']=$this->m_sesion->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->Sesion_model->consultar_tipo($tipo);
+			$res['tipo']=$this->m_sesion->consultar_tipo($tipo);
 
 			switch ($res['tipo']) {
 				case 'e':
-						print_r('entra a estudiantes');
-						//header ('Location: https://workfinal.herokuapp.com/E_users');
-						redirect('E_users');
+						redirect('usuarios');
 					break;
 				case 'a':
 						redirect('administrador');
@@ -129,8 +124,8 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				//$this->load->view('formulario',$res);
 			}else{
-				$this->load->model('Sesion_model');
-				//redirect('Usuarios');
+				$this->load->model('m_sesion');
+				redirect('usuarios');
 			}
 		}
 	}

@@ -20,7 +20,7 @@
         <p>Lastname</p>
 				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required>
 				<p>Code</p>
-				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onblur="validaNumericos();">
+				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onChange="validarSiNumero(this.value);" size="10">
 				<!-- <p>Semester</p>
 				<input type="text" name="txtsemester" id="txtcla" placeholder="Semester" required onkeypress="ValidaSoloNumeros();"> -->
 				<p>Semester</p>
@@ -94,18 +94,10 @@
 			}
 
 
-	function validaNumericos(){
-		 var inputtxt = document.getElementById('text');
-		 var valor = inputtxt.value;
-		 for(i=0;i<valor.length;i++){
-		     var code=valor.charCodeAt(i);
-		         if(code<=48 || code>=57){
-		           inputtxt.value="";
-		           return;
-		         }
-		   }
-
-		}
+			function validarSiNumero(numero){
+				if (!/^([0-9])*$/.test(numero))
+					alert("El valor " + numero + " no es un número");
+			}
 
 		</script>
 	</body>

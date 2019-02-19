@@ -112,7 +112,7 @@ class Welcome extends CI_Controller {
 
 			switch ($res['tipo']) {
 				case 'e':
-						redirect('usuarios');
+						redirect('E_users');
 					break;
 				case 'a':
 						redirect('administrador');
@@ -121,7 +121,7 @@ class Welcome extends CI_Controller {
 
 			if ($res['mensaje']=='Incorrect Username or Password') {
 				$this->load->view('plantilla');
-				//$this->load->view('formulario',$res);
+				$this->load->view('formulario',$res);
 			}else{
 				$this->load->model('Sesion_model');
 				redirect('E_users');

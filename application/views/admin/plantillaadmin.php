@@ -131,11 +131,11 @@
                 <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
               <span class="hidden-xs">
                 <?php
-	               echo "".$this->session->userdata('nickname');
+	               echo "".$this->session->userdata('name')." ".$this->session->userdata('nickname');
                  ?>
               </span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="background:black;">
               <!-- User image -->
               <li class="user-header">
                   <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
@@ -150,9 +150,9 @@
 
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                <!-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                </div> -->
                 <div class="pull-right">
                   <a href="<?php echo base_url();?>usuarios/cerrar" class='btn btn-default btn-flat' style="background:#4DB6AC">Sign out</a>
                 </div>

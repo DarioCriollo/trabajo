@@ -127,9 +127,8 @@ class Welcome extends CI_Controller {
 					$this->load->model('Sesion_model');
 					redirect('E_users');
 				}else{
-					if($res['tipo']=='a'){
 							redirect('C_administrador');
-					}
+
 				}
 
 			}

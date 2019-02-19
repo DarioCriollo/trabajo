@@ -1181,8 +1181,8 @@ var code =[];
 		}
 
 		function enviaResultado(){
-			console.log('acertadas'+vecacertadas);
-			console.log('fallidas'+vecfallidas);
+			// console.log('acertadas'+vecacertadas);
+			// console.log('fallidas'+vecfallidas);
 
 			tamanoacertadas=vecacertadas.length;
 			tamanofallidas=temafallidas.length;
@@ -1191,7 +1191,7 @@ var code =[];
 			//FERNANDO
 		//	alert("acertadas"+tamanoacertadas+"fallidas"+vecfallidas.length+"nivel actual"+nivelactual);
 
-			console.log('tamano de las fallidas'+vecfallidas.length+'nivel actual : '+nivelactual);
+			//console.log('tamano de las fallidas'+vecfallidas.length+'nivel actual : '+nivelactual);
 
 			$.ajax({
 				url:$("#url").val()+"C_inicio/respuesta",

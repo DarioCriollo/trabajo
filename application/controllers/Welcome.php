@@ -122,17 +122,18 @@ class Welcome extends CI_Controller {
 			if ($res['mensaje']=='Incorrect Username or Password') {
 				$this->load->view('plantilla');
 				$this->load->view('formulario',$res);
-			}else{
-				print($res['tipo']);
-				if($res['tipo']=='e'){
-					$this->load->model('Sesion_model');
-					redirect('E_users');
-				}else{
-					redirect('C_administrador');
-
-				}
-
 			}
+			// else{
+			// 	print($res['tipo']);
+			// 	if($res['tipo']=='e'){
+			// 		$this->load->model('Sesion_model');
+			// 		redirect('E_users');
+			// 	}else{
+			// 		redirect('C_administrador');
+			//
+			// 	}
+			//
+			// }
 		}
 	}
 

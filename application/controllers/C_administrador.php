@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Administrador extends CI_Controller {
+class C_administrador extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper(array('form', 'url'));
@@ -28,22 +28,22 @@ class Administrador extends CI_Controller {
   }
 	public function deleteadmin(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->listAdmin();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->listAdmin();
 		$this->load->view("admin/deleteadmin",$datos);
 	}
 	public function deleteUser(){
 		$this->load->view('admin/plantillaadmin');
-		$this->load->model('graficos');
-		$datos["datos"]=$this->graficos->listUser();
+		$this->load->model('Graficos_model');
+		$datos["datos"]=$this->Graficos_model->listUser();
 		$this->load->view("admin/deleteuser",$datos);
 	}
 	public function deleteA(){
 		//print_r('criollo');
 		//$this->load->view('admin/plantillaadmin');
 		$id=$this->input->post('xid');
-		$this->load->model('graficos');
-		$this->graficos->deleteA($id);
+		$this->load->model('Graficos_model');
+		$this->Graficos_model->deleteA($id);
 		$this->load->view("admin/deleteadmin");
 
 	}
@@ -72,8 +72,8 @@ class Administrador extends CI_Controller {
 			$carrer=$this->input->post('txtcarrer');
 			$email=$this->input->post('txtemail');
 			$clave=$this->input->post('txtcla');
-			$this->load->model('m_sesion');
-			$res['mensaje']=$this->m_sesion->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
+			$this->load->model('Sesion_model');
+			$res['mensaje']=$this->Sesion_model->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
 			//$this->load->view('admin/registeruser',$res);
 		}
 		$this->load->view('admin/plantillaadmin');
@@ -92,8 +92,8 @@ class Administrador extends CI_Controller {
 			$code=$this->input->post('txtcode');
 			$email=$this->input->post('txtemail');
 			$clave=$this->input->post('txtcla');
-			$this->load->model('m_sesion');
-			$res['mensaje']=$this->m_sesion->registrarUsuarioadmin($name,$nick,$code,$email,$clave);
+			$this->load->model('Sesion_model');
+			$res['mensaje']=$this->Sesion_model->registrarUsuarioadmin($name,$nick,$code,$email,$clave);
 			$this->load->view('admin/plantillaadmin');
 			$this->load->view('admin/registeradmin',$res);
 		}else{

@@ -115,7 +115,7 @@ class Welcome extends CI_Controller {
 						redirect('E_users');
 					break;
 				case 'a':
-						redirect('administrador');
+						redirect('C_administrador');
 					break;
 			}
 

@@ -123,7 +123,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('plantilla');
 				$this->load->view('formulario',$res);
 			}else{
-				print($res['topo']);
+				print($res['tipo']);
 				if($res['tipo']=='e'){
 					$this->load->model('Sesion_model');
 					redirect('E_users');

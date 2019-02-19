@@ -68,7 +68,7 @@
             <!--Card content-->
             <div style="margin-left:50px;" class="card-body text-center">
               <!--Title-->
-              <h4 class="card-title"><strong>Joaquin Patiño</strong></h4>
+              <h4 class="card-title"><strong>Alfonso Joaquin Patiño Galarza</strong></h4>
               <h5 class="indigo-text"><strong>Investigador</strong></h5>
               <h6 class="indigo-text"><strong>Universidad de Nariño</strong></h6>
               <h6 class="indigo-text"><strong>San Juan de Pasto</strong></h6>
@@ -96,7 +96,7 @@
             <!--Card content-->
             <div style="margin-left:50px;" class="card-body text-center">
               <!--Title-->
-              <h4 class="card-title"><strong>Dario Criollo</strong></h4>
+              <h4 class="card-title"><strong>Dario Fernando Criollo Estrada</strong></h4>
               <h5 class="indigo-text"><strong>Investigador</strong></h5>
               <h6 class="indigo-text"><strong>Universidad de Nariño</strong></h6>
               <h6 class="indigo-text"><strong>San Juan de Pasto</strong></h6>

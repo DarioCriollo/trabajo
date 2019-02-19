@@ -131,19 +131,20 @@
                 <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
               <span class="hidden-xs">
                 <?php
-	               echo "".$this->session->userdata('name')." ".$this->session->userdata('nickname');
+	               echo "".$this->session->userdata('name')."  ".$this->session->userdata('nickname');
                  ?>
               </span>
             </a>
-            <ul class="dropdown-menu" style="background:black;">
+            <ul class="dropdown-menu" style="background:#000000;">
               <!-- User image -->
-              <li class="user-header">
+              <li class="user-header" style="background:#000000;">
                   <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
                 <p>
                   <?php
-  	               echo "".$this->session->userdata('nickname');
+  	               echo "".$this->session->userdata('name')."  ".$this->session->userdata('nickname');
                    ?>
-                  <small>March 2018</small>
+                  <small>Udenar</small>
+                  <small>2019</small>
                 </p>
               </li>
               <!-- Menu Body -->

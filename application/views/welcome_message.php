@@ -261,7 +261,8 @@
                   <?php
   	                echo "".$this->session->userdata('name')."    ".$this->session->userdata('nickname');
                    ?>
-                  <small>October 2018</small>
+                   <small>Udenar</small>
+                   <small>2019</small>
                 </p>
               </li>
               <!-- Menu Body -->

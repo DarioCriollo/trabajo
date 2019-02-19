@@ -18,7 +18,7 @@
 
 
 		<div class="contenedor" id="uno">
-			<a href="<?php echo base_url ();?>inicio/questionsc1" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/icon6.png"></a>
+			<a href="<?php echo base_url ();?>C_inicio/questionsc1" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/icon6.png"></a>
 			<p class="texto">Level Test C1</p>
 		</div>
 

@@ -20,7 +20,7 @@
         <p>Lastname</p>
 				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required>
 				<p>Code</p>
-				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onChange="validarSiNumero(this.value);" size="10">
+				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onkeypress="return justNumbers(event);" size="10">
 				<!-- <p>Semester</p>
 				<input type="text" name="txtsemester" id="txtcla" placeholder="Semester" required onkeypress="ValidaSoloNumeros();"> -->
 				<p>Semester</p>
@@ -93,11 +93,16 @@
 			else alert('email valido');
 			}
 
+			function justNumbers(e)
+				{
+				var keynum = window.event ? window.event.keyCode : e.which;
+				if ((keynum == 8) || (keynum == 46))
+				return true;
 
-			function validarSiNumero(numero){
-				if (!/^([0-9])*$/.test(numero))
-					alert("El valor " + numero + " no es un número");
-			}
+				return /\d/.test(String.fromCharCode(keynum));
+				}
+
+
 
 		</script>
 	</body>

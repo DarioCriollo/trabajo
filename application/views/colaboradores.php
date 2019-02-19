@@ -68,7 +68,7 @@
                   <div style="margin-left:50px;" class="card-body text-center">
                     <!--Title-->
                     <h4 class="card-title"><strong>Galeras.NET</strong></h4>
-                    <h5 class="indigo-text"><strong>Research Group</strong></h5>
+                    <h5 class="indigo-text"><strong>Presentación</strong></h5>
 
                     <p style="text-align:justify;" class="card-text">Apoya la investigación a través de su participación en diferentes proyectos de forma interdisciplinaria, de acuerdo con las estadísticas se puede decir que, su mayor fortaleza y en lo que más se ha destacado desde el año 2007 hasta 2016, es en la construcción de proyectos investigativos cuyo resultados son la producción de herramientas software, las cuales se enmarcan en el cumplimiento y fortalecimiento de las líneas de investigación que caracterizan al grupo</p>
 
@@ -95,9 +95,9 @@
                   <div style="margin-left:50px;" class="card-body text-center">
                     <!--Title-->
                     <h4 class="card-title"><strong>Lenguaje y Pedagogía</strong></h4>
-                    <h5 class="indigo-text"><strong>Research Group</strong></h5>
+                    <h5 class="indigo-text"><strong>Presentación</strong></h5>
 
-                    <p style="text-align:justify;" class="card-text">Presentación: Cuando leemos sobre la investigación en enseñanza de las lenguas extranjeras, es común encontrar ideas, entornos y condiciones de aprendizaje que son radicalmente diferentes de lo que nos es conocido en un lugar como Colombia, y más específicamente, en Nariño. Vale la pena leer los hallazgos de lugares con una fuerte tradición en la investigación de TESOL (Australia, Canadá, Estados Unidos), pero es aún más emocionante descubrir cómo responden en nuestro entorno las preguntas de las que los docentes de todo el mundo preguntan. Esa es la primera razón por la cual se creó Lenguaje and Pedagogía.
+                    <p style="text-align:justify;" class="card-text">Cuando leemos sobre la investigación en enseñanza de las lenguas extranjeras, es común encontrar ideas, entornos y condiciones de aprendizaje que son radicalmente diferentes de lo que nos es conocido en un lugar como Colombia, y más específicamente, en Nariño. Vale la pena leer los hallazgos de lugares con una fuerte tradición en la investigación de TESOL (Australia, Canadá, Estados Unidos), pero es aún más emocionante descubrir cómo responden en nuestro entorno las preguntas de las que los docentes de todo el mundo preguntan. Esa es la primera razón por la cual se creó Lenguaje and Pedagogía.
                     </p>
 
                   </div>

@@ -178,10 +178,17 @@
           <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
         </div>
         <div class="pull-left info">
-          <?php
-           echo "".$this->session->userdata('nickname');
-           ?>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <div style="margin-top:-30px;" class="user-panel">
+            <div class="pull-left image">
+              <img src="<?php echo base_url();?>assets/dist/img/p.png"/>
+            </div>
+            <div class="pull-left info">
+
+              <a class="navbar-brand" href="#" style="font-size:16px;"><i><strong></strong></i><strong >PAR</strong>LANA</a>
+              <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+            </div>
+          </div>
+
         </div>
       </div>
 

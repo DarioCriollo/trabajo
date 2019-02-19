@@ -110,7 +110,8 @@ class Welcome extends CI_Controller {
 			$tipo=$res;
 			$kind=$this->Sesion_model->consultar_tipo($tipo);
 			print_r('dario');
-			print_r($kind);
+			print_r($kind	);
+			print_r('estrada');
 			switch ($kind) {
 				case 'e':
 						redirect('E_users');

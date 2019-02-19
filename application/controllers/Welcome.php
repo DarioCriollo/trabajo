@@ -122,8 +122,8 @@ class Welcome extends CI_Controller {
 			}
 
 			if ($res['mensaje']=='Incorrect Username or Password') {
-				$this->load->view('plantilla');
-				$this->load->view('formulario',$res);
+				//$this->load->view('plantilla');
+				//$this->load->view('formulario',$res);
 			}
 			// else{
 			// 	print($res['tipo']);

@@ -107,23 +107,25 @@ class Welcome extends CI_Controller {
 			//echo "paso para ingresar";
 			$this->load->model('Sesion_model');
 			$res['mensaje']=$this->Sesion_model->consultar_usr();
-			$tipo=$res;
-			$kind=$this->Sesion_model->consultar_tipo($tipo);
-			print_r('dario');
-			print_r($kind	);
-			print_r('estrada');
-			switch ($kind) {
-				case 'e':
-						redirect('E_users');
-					break;
-				case 'a':
-						redirect('C_administrador');
-					break;
-			}
+
 
 			if ($res['mensaje']=='Incorrect Username or Password') {
-				//$this->load->view('plantilla');
+				$this->load->view('plantilla');
 				$this->load->view('formulario',$res);
+			}else{
+				$tipo=$res;
+				$kind=$this->Sesion_model->consultar_tipo($tipo);
+				print_r('dario');
+				print_r($kind	);
+				print_r('estrada');
+				switch ($kind) {
+					case 'e':
+							redirect('E_users');
+						break;
+					case 'a':
+							redirect('C_administrador');
+						break;
+				}
 			}
 			// else{
 			// 	print($res['tipo']);

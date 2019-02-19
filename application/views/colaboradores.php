@@ -84,7 +84,7 @@
 
                   <!--Card image-->
                   <div class="view overlay">
-                     <img src="<?php echo base_url();?>assets/dist/img/gicil.png" class="userfinal" /><br><br><br><br><br><br>
+                     <img src="<?php echo base_url();?>assets/dist/img/glyp.png" class="userfinal" /><br><br><br><br><br><br>
                     <a href="#!">
                       <div class="mask rgba-white-slight"></div>
                     </a>
@@ -94,10 +94,10 @@
                   <!--Card content-->
                   <div style="margin-left:50px;" class="card-body text-center">
                     <!--Title-->
-                    <h4 class="card-title"><strong>GICIL</strong></h4>
+                    <h4 class="card-title"><strong>Lenguaje y Pedagogía</strong></h4>
                     <h5 class="indigo-text"><strong>Research Group</strong></h5>
 
-                    <p style="text-align:justify;" class="card-text">El grupo de investigaciones GICIL busca adelantar investigaciones en las áreas de: Lingüística, Sociolingüística, Psicolingüística, Semiótica, Lingüística Textual, Lingüística Aplicada y Pedagogía de las Lenguas para de esta manera, lograr su propósito primordial el cual  es, contribuir a la conformación de comunidades académicas que faciliten y sean agentes activos en el diseño, sustentación y generación de un “Plan de Desarrollo investigativo” en las áreas anteriormente mencionadas.
+                    <p style="text-align:justify;" class="card-text">Presentación: Cuando leemos sobre la investigación en enseñanza de las lenguas extranjeras, es común encontrar ideas, entornos y condiciones de aprendizaje que son radicalmente diferentes de lo que nos es conocido en un lugar como Colombia, y más específicamente, en Nariño. Vale la pena leer los hallazgos de lugares con una fuerte tradición en la investigación de TESOL (Australia, Canadá, Estados Unidos), pero es aún más emocionante descubrir cómo responden en nuestro entorno las preguntas de las que los docentes de todo el mundo preguntan. Esa es la primera razón por la cual se creó Lenguaje and Pedagogía.
                     </p>
 
                   </div>

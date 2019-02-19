@@ -18,7 +18,6 @@ class Welcome extends CI_Controller {
 	public function about(){
 		$this->load->view('about');
 
-			// $this->load->view('Sesion_model');
 	}
 	public function parlanateam(){
 		$this->load->view('parlanateam');

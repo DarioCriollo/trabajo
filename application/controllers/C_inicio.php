@@ -80,9 +80,9 @@
 
 		//echo var_dump($xvector);
 		//print_r($xvector);
-		$this->load->model('reglas');
+		$this->load->model('Reglas_model');
 
-		$resultados=$this->reglas->reglasInferencia($xvector,$xnivel,$correct,$failed);
+		$resultados=$this->Reglas_model->reglasInferencia($xvector,$xnivel,$correct,$failed);
 
 		//$this->questions->conteoFallidas($xvector);
 		//print_r($resultados);

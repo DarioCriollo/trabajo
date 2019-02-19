@@ -19,15 +19,15 @@
 	public function pregunta(){
 		$xdat=$this->input->post('xpregunta');
 		//print_r($xdato);
-		$this->load->model('questions');
-		$result=$this->questions->codigo($xdat);
+		$this->load->model('Questions_model');
+		$result=$this->Questions_model->codigo($xdat);
 		echo json_encode($result);
 
 	}
 	public function lectura(){
 			$xdato=$this->input->post('xpregunta');
-			$this->load->model('questions');
-			$resultados=$this->questions->lectura($xdato);
+			$this->load->model('Questions_model');
+			$resultados=$this->Questions_model->lectura($xdato);
 			// print_r($resultados);
 			echo json_encode($resultados);
 	}
@@ -35,22 +35,22 @@
 	public function busca(){
 		$xdato=$this->input->post('xdato');
 		//echo "dario".$xdrogueria;
-		$this->load->model('questions');
-		$resultados=$this->questions->busca($xdato);
+		$this->load->model('Questions_model');
+		$resultados=$this->Questions_model->busca($xdato);
 		echo json_encode($resultados);
 	}
 	public function codesread(){
 		$xdato=$this->input->post('xdato');
 
 		//echo "dario".$xdrogueria;
-		$this->load->model('questions');
-		$resultados=$this->questions->codes($xdato);
+		$this->load->model('Questions_model');
+		$resultados=$this->Questions_model->codes($xdato);
 		// print_r($resultados);
 		echo json_encode($resultados);
 	}
 	public function objects(){
-		$this->load->model('questions');
-		$resultados=$this->questions->objects();
+		$this->load->model('Questions_model');
+		$resultados=$this->Questions_model->objects();
 		echo json_encode($resultados);
 	}
 
@@ -63,8 +63,8 @@
 		//echo var_dump($acertadas)."acertadas";
 		//echo var_dump($fallidas)."fallidas";
 
-		$this->load->model('questions');
-		$resultados=$this->questions->newQuestions($acertadas,$fallidas);
+		$this->load->model('Questions_model');
+		$resultados=$this->Questions_model->newQuestions($acertadas,$fallidas);
 		echo json_encode($resultados);
 	}
 

@@ -108,9 +108,10 @@ class Welcome extends CI_Controller {
 			$this->load->model('Sesion_model');
 			$res['mensaje']=$this->Sesion_model->consultar_usr();
 			$tipo=$res;
-			$res['tipo']=$this->Sesion_model->consultar_tipo($tipo);
-
-			switch ($res['tipo']) {
+			$kind=$this->Sesion_model->consultar_tipo($tipo);
+			print_r('dario');
+			print_r($kind);
+			switch ($kind) {
 				case 'e':
 						redirect('E_users');
 					break;

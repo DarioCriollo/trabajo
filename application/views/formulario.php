@@ -15,7 +15,7 @@
 			<strong><h2><b>Log in<b></h2><strong>
 			<form method="post" action="<?=base_url('Welcome/login')?>">
 				<p>Code</p>
-				<input type="text" name="txtlog" id="txtlog" placeholder="Code" required onkeypress="ValidaSoloNumeros();">
+				<input type="text" name="txtlog" id="txtlog" placeholder="Code" required onkeypress="return justNumbers(event);">
 				<p>Password</p>
 				<input type="password" name="txtcla" id="txtcla" placeholder="••••••" required>
 				<br><br>
@@ -49,6 +49,16 @@
 			if ((event.keyCode < 48) || (event.keyCode > 57))
 			event.returnValue = false;
 		}
+
+
+		function justNumbers(e)
+			{
+			var keynum = window.event ? window.event.keyCode : e.which;
+			if ((keynum == 8) || (keynum == 46))
+			return true;
+
+			return /\d/.test(String.fromCharCode(keynum));
+			}
 		</script>
 	</body>
 </html>

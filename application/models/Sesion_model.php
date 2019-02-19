@@ -22,7 +22,7 @@ class Sesion_model extends CI_Model {
 			$reg=$res->row();
 			$this->session->set_userdata('nickname',$reg->nickname);
 			$this->session->set_userdata('name',$reg->name);
-			$this->session->set_userdata('code',$reg->code);
+			//$this->session->set_userdata('code',$reg->code);
       $this->session->set_userdata('tipo',$reg->kind);
 			// return 'bienbenido';
       return $res->result_array();

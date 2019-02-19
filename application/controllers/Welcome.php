@@ -147,7 +147,7 @@ class Welcome extends CI_Controller {
 			$email=$this->input->post('txtemail');
 			$clave=$this->input->post('txtcla');
 			$this->load->model('Sesion_model');
-			$res['mensaje']=$this->sesion->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
+			$res['mensaje']=$this->Sesion_model->registrarUsuario($name,$nick,$code,$semester,$carrer,$email,$clave);
 				if($res['mensaje']=='the code already exists'){
 					$this->load->view('plantilla');
 					$this->load->view('registro',$res);

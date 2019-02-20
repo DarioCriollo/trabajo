@@ -78,18 +78,27 @@ class Sesion_model extends CI_Model {
 
 
   }
-  function registrarUsuarioadmin($name,$nick,$code,$email,$clave){
-    $data= array(
-      'name' => $name,
-      'nickname' => $nick,
-      'code' => $code,
-      'email' => $email,
-      'password' => $clave,
-      'kind' => 'a',
-    );
-    $res=$this->db->insert('users',$data);
-    if (!$res) return "error al insertar usuario";
-    else return "Usuario registrado con exito";
+  function registrarUsuarioadmin($name,$nick,$code,$email,$type,$semester,$carrer,$clave){
+
+    $datas=$this->existcode($code);
+      if($datas=='usuario no existe'){
+        $data= array(
+          'name' => $name,
+          'nickname' => $nick,
+          'code' => $code,
+          'email' => $email,
+          'password' => $clave,
+          'kind' => $type,
+          'semester' => $semester,
+          'carrer' => $carrer,
+        );
+        $res=$this->db->insert('users',$data);
+        return "Registered user successfully";
+
+      }else{
+        return "The code already exists";
+      }
+
   }
 
 }

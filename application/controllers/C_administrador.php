@@ -79,29 +79,35 @@ class C_administrador extends CI_Controller {
 		$this->load->view('admin/plantillaadmin');
 		$this->load->view('admin/registeruser');
 	}
+
+
 	public function registera(){
 
-		$this->form_validation->set_rules('txtname','name','required');
-		$this->form_validation->set_rules('txtnick','nickname','required');
-		$this->form_validation->set_rules('txtcode','code','required');
-		$this->form_validation->set_rules('txtemail','email','required');
-		$this->form_validation->set_rules('txtcla','clave','required');
-		if ($this->form_validation->run()==TRUE){
-			$name=$this->input->post('txtname');
-			$nick=$this->input->post('txtnick');
-			$code=$this->input->post('txtcode');
-			$email=$this->input->post('txtemail');
-			$clave=$this->input->post('txtcla');
-			$this->load->model('Sesion_model');
-			$res['mensaje']=$this->Sesion_model->registrarUsuarioadmin($name,$nick,$code,$email,$clave);
-			$this->load->view('admin/plantillaadmin');
-			$this->load->view('admin/registeradmin',$res);
-		}else{
-			$this->load->view('admin/plantillaadmin');
-			$this->load->view('admin/registeradmin');
-		}
+			$this->form_validation->set_rules('txtname','name','required');
+			$this->form_validation->set_rules('txtnick','nickname','required');
+			$this->form_validation->set_rules('txtcode','code','required');
+			$this->form_validation->set_rules('txtemail','email','required');
+			$this->form_validation->set_rules('txttype','type','required');
+			$this->form_validation->set_rules('txtcla','clave','required');
+			if ($this->form_validation->run()==TRUE){
+				$name=$this->input->post('txtname');
+				$nick=$this->input->post('txtnick');
+				$code=$this->input->post('txtcode');
+				$email=$this->input->post('txtemail');
+				$type=$this->input->post('txttype');
+				$semester=$this->input->post('txtsemester');
+				$carrer=$this->input->post('txtcarrer');
+				$clave=$this->input->post('txtcla');
+				$this->load->model('Sesion_model');
+				$res['mensaje']=$this->Sesion_model->registrarUsuarioadmin($name,$nick,$code,$email,$type,$semester,$carrer,$clave);
+				$this->load->view('admin/plantillaadmin');
+				$this->load->view('admin/registeradmin',$res);
+			}else{
+				$this->load->view('admin/plantillaadmin');
+				$this->load->view('admin/registeradmin');
+			}
 
-	}
+		}
 	public function cerrar(){
 		$this->session->sess_destroy();
 		redirect('Welcome');

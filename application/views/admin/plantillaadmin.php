@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>PARLANA</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -174,9 +174,6 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div style="margin-top:-30px;" class="user-panel">
-        <div class="pull-left image">
-          <img src="<?php echo base_url();?>assets/dist/img/usuario.png"/>
-        </div>
         <div class="pull-left info">
           <div style="margin-top:-30px;" class="user-panel">
             <div class="pull-left image">
@@ -204,8 +201,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-              <li><a href="<?php echo base_url ();?>administrador/functionadmin" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Admin</a><li>
-                <li><a href="<?php echo base_url ();?>administrador/functionuser" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Student</a><li>
+              <!-- <li><a href="<?php echo base_url ();?>administrador/functionadmin" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Admin</a><li> -->
+                <li><a href="<?php echo base_url ();?>C_administrador/functionuser" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Management</a><li>
 
               <!-- <li><a href="<?php echo base_url ();?>Welcome/information" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Test Information B1 </a><li> -->
               <!-- <li><a href="<?php echo base_url ();?>Welcome/datos" class="fa fa-circle-o">&nbsp;&nbsp;&nbsp;Graphics by Level</a><li>

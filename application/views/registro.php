@@ -18,7 +18,7 @@
         <p>Name</p>
 				<input type="text" name="txtname" id="txtlog" placeholder="Name" required>
         <p>Lastname</p>
-				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required>
+				<input type="text" name="txtnick" id="txtlog" placeholder="Lastname" required maxlength="10">
 				<p>Code</p>
 				<input type="text" name="txtcode" id="txtcla" placeholder="Code" required onkeypress="return justNumbers(event);" size="10">
 				<!-- <p>Semester</p>

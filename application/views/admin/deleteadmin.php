@@ -31,7 +31,7 @@
             <div class="box-body">
                 <div class="row">
                   <div class="form-group" align="right" style="margin-right:20px;">
-                    <a href="<?php echo base_url ();?>administrador/registeradmin" type="submit" class="btn btn-success btn-lg"  name="button">New Administrator</a>
+                    <a href="<?php echo base_url ();?>C_administrador/registeradmin" type="submit" class="btn btn-success btn-lg"  name="button">New Administrator</a>
                   </div>
                 </div>
                 <hr>
@@ -189,7 +189,7 @@ function eliminarAdmin(id){
   confirmar=confirm("Estas Seguro");
   if (confirmar){
   $.ajax({
-    url:$("#url").val()+"administrador/deleteA",
+    url:$("#url").val()+"C_administrador/deleteA",
     type:"post",
     data:{xid:id},
     beforeSend:function(){
@@ -217,7 +217,7 @@ function eliminarAdmin(id){
 function actualizarAdmin(id){
  alert('id a actualizar'+id);
  $.ajax({
-   url:$("#url").val()+"administrador/updateAdmin",
+   url:$("#url").val()+"C_administrador/updateAdmin",
    type:"post",
    data:{xid:id},
    beforeSend:function(){
@@ -251,7 +251,7 @@ function enviaUpdate(){
   password=document.getElementById("txtcla").value;
   //alert('tomar datos'+name);
   $.ajax({
-    url:$("#url").val()+"administrador/enviaUpdate",
+    url:$("#url").val()+"C_administrador/enviaUpdate",
     type:"post",
     data:{xname:name,xlname:lname,xcode:code,xemail:email,xpassword:password},
     beforeSend:function(){
@@ -311,7 +311,7 @@ $('#example').DataTable( {
   });
   function sale(){
     $.ajax({
-      url:$("#url").val()+"administrador/deleteadmin",
+      url:$("#url").val()+"C_administrador/deleteadmin",
       type:"post",
       beforeSend:function(){
         $("#resultados").html("espere un momento ......");

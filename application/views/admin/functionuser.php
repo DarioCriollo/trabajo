@@ -19,11 +19,11 @@
 		</div> -->
 
 		<div class="contenedor" id="cinco">
-			<a href="<?php echo base_url ();?>administrador/deleteadmin" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/add.png"></a>
+			<a href="<?php echo base_url ();?>C_administrador/deleteadmin" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/add.png"></a>
 			<p class="texto">Administrator</p>
 		</div>
 		<div class="contenedor" id="dos">
-			<a href="<?php echo base_url ();?>administrador/deleteuser" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/add.png"></a>
+			<a href="<?php echo base_url ();?>C_administrador/deleteuser" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/add.png"></a>
 			<p class="texto">Users</p>
 		</div>
 

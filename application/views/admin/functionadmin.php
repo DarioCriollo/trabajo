@@ -18,7 +18,6 @@
 			<p class="texto">Add</p>
 		</div>
 
-
 		<div class="contenedor" id="siete">
 			<a href="<?php echo base_url ();?>administrador/deleteadmin" ><img class="icon" src="<?php echo base_url();?>assets/dist/img/delete.png"></a>
 			<p class="texto">Delete</p>

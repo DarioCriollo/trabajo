@@ -121,4 +121,25 @@ class Graficos_model extends CI_Model
 
 	}
 
+	public function updateAdmin($id){
+	$this->db->select('*');
+	$this->db->where('id',$id);
+	$this->db->from('users');
+	$resultado=$this->db->get();
+	return $resultado->result_array();
+
+}
+
+public function enviaUpdate($name,$lname,$code,$email,$password){
+	$data = array(
+	'name' => $name,
+	'nickname' => $lname,
+	'code' => $code,
+	'email' => $email,
+	'password' => $password
+	);
+	$this->db->where('code',$code);
+	$this->db->update('users',$data);
+}
+
 }

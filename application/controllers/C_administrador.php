@@ -108,6 +108,26 @@ class C_administrador extends CI_Controller {
 			}
 
 		}
+
+		public function updateAdmin(){
+	//print_r('criollo');
+	//$this->load->view('admin/plantillaadmin');
+	$id=$this->input->post('xid');
+	$this->load->model('Graficos_model');
+	$datos=$this->Graficos_model->updateAdmin($id);
+	echo json_encode($datos);
+
+}
+
+public function enviaUpdate(){
+	$name=$this->input->post('xname');
+	$lname=$this->input->post('xlname');
+	$code=$this->input->post('xcode');
+	$email=$this->input->post('xemail');
+	$password=$this->input->post('xpassword');
+	$this->load->model('Graficos_model');
+	$datos=$this->Graficos_model->enviaUpdate($name,$lname,$code,$email,$password);
+}
 	public function cerrar(){
 		$this->session->sess_destroy();
 		redirect('Welcome');

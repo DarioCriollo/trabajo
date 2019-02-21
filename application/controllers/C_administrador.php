@@ -10,7 +10,7 @@ class C_administrador extends CI_Controller {
 		//$this->load->view('encabezado');
 		if ($this->session->userdata('code')) {
 			$this->load->view('admin/plantillaadmin');
-			$this->load->view('admin/functionuser');
+			$this->load->view('admin/functionadmin');
 		}else{
 			$res['mensaje']="Incorrect Username or Password";
 			$this->load->view('principal');
